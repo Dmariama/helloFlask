@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon application flask en conteneur</title>
+</head>
+<body>
+    <h1>Bienvenue sur ma page d'accueil ! </h1>
+    <h2>Mon application flask en conteneur docker</h2>
+    <p>Ceci est un exemple de template HTML utilisant Jinja.</p>
+    <!-- Inclure l'image -->
+    <img src="{{ url_for('static', filename='fleur.png') }}"  alt="fleur" width="200" height="200">
+    <p>Vous êtes le {{ count }}ème visiteur sur cette page.</p>
+    <p>Voici quelques liens vers d'autres pages :</p>
+    <ul>
+        <li><a href="{{ url_for('about') }}">À propos</a></li>
+        <li><a href="{{ url_for('form') }}">Formulaire</a></li>
+    </ul>
+</body>
+</html>
